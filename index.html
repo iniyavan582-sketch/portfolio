@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Iniyavan M</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #84a6e9;
+        }
+
+        header {
+            background-color: #941919;
+            color: #fff;
+            padding: 2rem;
+        }
+
+        .header-content {
+            display: flex;             /* Align image + text side by side */
+            align-items: center;       /* Vertical alignment */
+            justify-content: center;   /* Center as a block */
+            gap: 20px;                 /* Space between photo and text */
+            text-align: left;
+            flex-wrap: wrap;           /* Allow wrap on small screens */
+        }
+
+        .profile-picture {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #fff;
+            flex-shrink: 0; /* Prevent shrinking */
+        }
+
+        .header-content h1 {
+            font-size: 2.5rem;
+            margin: 0;
+        }
+
+        .header-content p {
+            margin: 5px 0 0 0;
+            font-size: 1.2rem;
+            font-weight: 300;
+        }
+
+        nav {
+            background-color: #333;
+            color: #fff;
+            text-align: right;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0.5rem;
+            margin: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            color: #84a6e9;
+        }
+
+        .section-content {
+            background-color: #fff;
+            padding: 2rem;
+            margin: 1rem;
+            border-radius: 15px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+            text-align: justify;
+        }
+
+        .section-content h2 {
+            margin-top: 0;
+            color: #941919;
+        }
+
+        .download-button {
+            background-color: #333;
+            color: #fff;
+            padding: 0.6rem 1.2rem;
+            text-decoration: none;
+            border-radius: 25px;
+            display: inline-block;
+            margin-top: 10px;
+            transition: background-color 0.3s ease;
+        }
+
+        .download-button:hover {
+            background-color: #555;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1rem 0;
+            background-color: #333;
+            color: #fff;
+            margin-top: 20px;
+        }
+
+        ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+
+        ul li {
+            margin-bottom: 5px;
+        }
+
+        /* Responsive header fix */
+        @media (max-width: 600px) {
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <img src="./Iniyavan.jpg" alt="Profile Picture" class="profile-picture">
+            <div>
+                <h1>Iniyavan M</h1>
+                <p>Computer Science Student & Tech Enthusiast</p>
+            </div>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#resume">Resume</a></li>
+        </ul>
+    </nav>
+
+    <section id="about">
+        <div class="section-content">
+            <h2>About Me</h2>
+            <p>
+                I'm a computer science student and technology enthusiast with a strong interest in artificial intelligence, cybersecurity, and emerging innovations. 
+                I’m passionate about exploring how technology can be used for the greater good—from improving everyday life to addressing global challenges like space exploration and regenerative medicine. 
+                Currently, I’m building my skills in Python, C++, Java, and data management, while also diving into AI systems and modern digital trends. 
+                I enjoy self-learning, staying curious, and keeping up with the latest advancements to build a strong foundation for my future career. 
+                Learn more about my work in <a href="https://techtrainer20.github.io/git_con2/" target="_blank"></a>.
+            </p>
+        </div>
+    </section>
+
+    <section id="education">
+        <div class="section-content">
+            <h2>Education</h2>
+            <p>Sri Muthukumaran Arts and Science College, Chennai (Mangadu)</p>
+        </div>
+    </section>
+
+    <section id="skills">
+        <div class="section-content">
+            <h2>Skills</h2>
+            <ul>
+                <li>Python</li>
+                <li>Data Science</li>
+                <li>HTML & CSS</li>
+                <li>Java</li>
+                <li>C++</li>
+                <li>JavaScript</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="projects">
+        <div class="section-content">
+            <h2>Projects</h2>
+            <ul>
+                <li><a href="#">Face Detector</a></li>
+                <li><a href="#">Chatbot</a></li>
+                <li><a href="#">Digital Library System</a></li>
+                <li><a href="#">Portfolio Website</a></li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="resume">
+        <div class="section-content" style="text-align:center;">
+            <h2>Resume</h2>
+            <a href="./iniya_resume (1)-2.pdf" target="_blank" class="download-button">Download CV</a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Iniyavan M | All Rights Reserved</p>
+    </footer>
+
+    <script>
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 60,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
